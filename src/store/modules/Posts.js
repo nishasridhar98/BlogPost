@@ -1,8 +1,23 @@
 import axios from 'axios'
 
-const state={}
+const state={
+    posts:[
+        {
+            id:1,
+            title: 'Post1',
+            body: 'First Blog Posts'
+        },
+        {
+            id:2,
+            title: 'Post2',
+            body: 'Second blog post'
+        }
+    ]
+};
 
-const getters={}
+const getters={
+    allposts: (state) => state.posts
+};
 
 const actions={}
 
