@@ -7,6 +7,8 @@
             <h4>{{post.title}}</h4>
 
             <p>{{post.body}}</p>
+
+            <i @click="deletePost(post.id)" class="fas fa-trash-alt"></i>
             </div>
         </div>
     </div>
@@ -17,8 +19,15 @@ import { mapGetters,mapActions } from 'vuex';
 //maps getters & actions from vuex to component
 export default {
     name: "Post",
-    methods: mapActions(['fetchPosts']),
-    computed: mapGetters(['allposts']),
+    methods:{
+    ...mapActions(['fetchPosts','deletePost'])
+    },
+    computed:{
+    ...mapGetters(['allposts']),
+    // body(){
+        
+    // }
+    },
     created(){
         this.fetchPosts();//call the action
     },
@@ -45,6 +54,13 @@ export default {
   cursor: pointer;
 }
 
+i {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  cursor: pointer;
+}
 /* div.b {
   white-space: nowrap; 
   width: 100px; 
