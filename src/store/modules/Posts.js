@@ -1,27 +1,25 @@
 import axios from 'axios'
 
 const state={
-    posts:[
-        {
-            id:1,
-            title: 'Post1',
-            body: 'First Blog Posts'
-        },
-        {
-            id:2,
-            title: 'Post2',
-            body: 'Second blog post'
-        }
-    ]
+    posts:[]
 };
 
 const getters={
     allposts: (state) => state.posts
 };
 
-const actions={}
+const actions={
+    async fetchPosts({commit}){
+        const response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=20');
 
-const mutations={}
+        commit('setPosts',response.data);
+    },
+
+}
+
+const mutations={
+    setPosts: (state, posts) => (state.posts = posts)
+}
 
 export default{
     state,
