@@ -22,12 +22,9 @@ export default {
     created(){
         this.fetchPosts();//call the action
     },
-    filters: {
-    text(value) {
-    //   return value.split()[:4]
-    }
+    
   }
-}
+
 </script>
 
 <style scoped>
