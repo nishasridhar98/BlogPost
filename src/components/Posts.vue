@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>BlogPost</h3>
+        <h2>Posts</h2>
         <div class="posts">
             <div v-for="post in allposts" :key=post.id
              class="post">
@@ -40,13 +40,13 @@ export default {
 .posts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 2rem;
  
 }
 .post {
     
   border: 1px solid #ccc;
-  background: #25CCF7;
+  background:  #89d7eb;
   padding: 1rem;
   border-radius: 5px;
   text-align: center;
