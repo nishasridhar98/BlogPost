@@ -25,8 +25,10 @@ export default {
         ...mapActions(['addPost']),
         onSubmit(e){
             e.preventDefault();//prevent refreshing of page
-            this.addPost(this.title,this.body);
-            // console.log(this.title,this.body);
+            this.addPost({title:this.title,body:this.body});
+            //console.log(this.title,this.body);
+            this.title='',//clearing the input field
+            this.body=''
         }
     }
 };
