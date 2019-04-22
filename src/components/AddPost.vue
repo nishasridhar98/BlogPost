@@ -1,10 +1,11 @@
 <template>
     <div>
-        <h3>Add Post</h3>
+        <h2>Add Post</h2>
         <div class="add">
             <form @submit="onSubmit">
                 <input type="text" v-model="title" placeholder="Enter the title">
                 <input type="text" v-model="body" placeholder="Enter the content">
+                <br>
                 <input type="submit" value="Submit ">
             </form>
         </div>
@@ -36,20 +37,36 @@ export default {
 </script>
 
 <style>
-form {
+/* form {
   display: flex;
+} */
+.add {
+  border-radius: 5px;
+  background-color: #89d7eb;
+  padding: 20px;
+  width: 50%;
 }
 input[type="text"] {
-  flex: 15;
+
+  width: 75%;
   padding: 10px;
-  border: 1px solid #41b883;
+  margin-top: 10px;
+  border: 1px solid #40a6c5;
   outline: 0;
+  padding: 10px 20px;
+  margin: 8px 0;
 }
 input[type="submit"] {
-  flex: 2;
-  background: #41b883;
+  
+  background: #40a6c5;   
   color: #fff;
-  border: 1px #41b883 solid;
+  margin-top: 10px;
+  border: 1px  #40a6c5 solid;
   cursor: pointer;
+  padding: 10px 10px;
+}
+
+input[type=submit]:hover {
+background-color: #457ba0;
 }
 </style>
