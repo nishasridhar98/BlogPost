@@ -1,0 +1,30 @@
+<template>
+    <div>
+        Filter Posts:
+         <select @change='filterPosts($event)'>
+            <option value="100">100</option>
+            <option value="50">50</option>
+            <option value="20">20</option>
+            <option value="10">10</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+</template>
+
+<script>
+import {mapActions} from 'vuex';
+
+export default {
+    name: 'FilterPosts',
+    methods: mapActions(['filterPosts'])
+
+}
+</script>
+
+<style>
+select {
+  margin-top: 20px;
+  padding: 6px;
+  border: #4196b8 1px solid;
+}
+</style>
