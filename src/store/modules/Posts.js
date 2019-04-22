@@ -14,10 +14,10 @@ const actions={
 
         commit('setPosts',response.data);
     },
-    async addPost({commit}, title, body){
+    async addPost({commit}, {title, body}){
         const response =  await axios.post('https://jsonplaceholder.typicode.com/posts',{title,body});
 
-        console.log(title,body);
+        // console.log(title,body);
         commit('newPost',response.data);
         
     },
