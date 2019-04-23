@@ -8,7 +8,7 @@
 
             <p>{{post.body}}</p>
 
-            <i @click="deletePost(post.id)" class="fas fa-trash-alt"></i>
+            <i @click="deletePost(post.id)" class="fas fa-trash"></i>
             </div>
         </div>
     </div>
@@ -37,15 +37,18 @@ export default {
 </script>
 
 <style scoped>
+h2{
+    margin: 10px;
+}
 .posts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
- 
+  margin: 10px;
 }
 .post {
     
-  border: 1px solid #ccc;
+  border: #020708 1px solid;
   background:  #89d7eb;
   padding: 1rem;
   border-radius: 5px;
@@ -56,9 +59,10 @@ export default {
 
 i {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: #fff;
+  bottom: 15px;
+  right: 15px;
+  font-size: 20px;
+  /* color: #fff; */
   cursor: pointer;
 }
 /* div.b {
