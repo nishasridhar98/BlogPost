@@ -6,6 +6,7 @@
     <AddPost />
     <FilterPosts />
     <Post />
+    <!-- <Comments /> -->
   </div>
 </template>
 
@@ -13,23 +14,32 @@
 import Post from './components/Posts.vue'
 import AddPost from './components/AddPost.vue'
 import FilterPosts from './components/FilterPosts.vue'
+import Comments from './components/Comments.vue'
 
 export default {
   name: 'app',
   components: {
     Post,
     AddPost,
-    FilterPosts
+    FilterPosts,
+    Comments,
   }
 }
 </script>
 
 <style>
+body{
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+  margin:0;
+  padding:0;
+  
+}
     .header {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 2px;
+    padding: 1px;
   }
 
 </style>
