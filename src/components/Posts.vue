@@ -11,10 +11,12 @@
             <i @click="deletePost(post.id)" class="fas fa-trash"></i>
             </div>
         </div>
+        <Comments />
     </div>
 </template>
 
 <script>
+import Comments from './Comments.vue'
 import { mapGetters,mapActions } from 'vuex';
 //maps getters & actions from vuex to component
 export default {
@@ -31,7 +33,9 @@ export default {
     created(){
         this.fetchPosts();//call the action
     },
-    
+    components:{
+        Comments
+    }
   }
 
 </script>
